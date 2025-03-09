@@ -28,6 +28,7 @@ class FirstRoute extends StatelessWidget {
                     fontSize: 24, 
                     fontWeight: FontWeight.bold, 
                     color: Color.fromARGB(255, 22, 18, 18),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -65,7 +66,7 @@ class SecondRoute extends StatelessWidget {
           ),
           Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 const Text(
                   "This is the entrance showing rooms 1100 and 1200!",
@@ -73,16 +74,22 @@ class SecondRoute extends StatelessWidget {
                     fontSize: 24, 
                     fontWeight: FontWeight.bold, 
                     color: Color.fromARGB(255, 13, 12, 12),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
                   ),
                 ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: const Text('Back out the door'),
+                Center( child: Row(
+                  children: [
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('Back out the door'),
+                    ),
+                    const SizedBox(height: 10),
+                  ],
                 ),
-                const SizedBox(height: 10),
+                ),
                 ElevatedButton(
                   child: const Text('Study Area and research rooms'),
                   onPressed: () {
@@ -92,6 +99,7 @@ class SecondRoute extends StatelessWidget {
                     );
                   },
                 ),
+            
               ],
             ),
           ),
@@ -125,6 +133,7 @@ class ThirdRoute extends StatelessWidget {
                     fontSize: 24, 
                     fontWeight: FontWeight.bold, 
                     color: Color.fromARGB(255, 11, 10, 10),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -188,6 +197,7 @@ class fourthroute extends StatelessWidget {
                     fontSize: 24, 
                     fontWeight: FontWeight.bold, 
                     color: Color.fromARGB(255, 11, 10, 10),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -250,6 +260,7 @@ class fifthRoute extends StatelessWidget {
                     fontSize: 24, 
                     fontWeight: FontWeight.bold, 
                     color: Color.fromARGB(255, 11, 10, 10),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -312,6 +323,7 @@ class sixthRoute extends StatelessWidget {
                     fontSize: 24, 
                     fontWeight: FontWeight.bold, 
                     color: Color.fromARGB(255, 11, 10, 10),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
                   ),
                 ),
                 const SizedBox(height: 10),
