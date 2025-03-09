@@ -399,7 +399,7 @@ class SeventhRoute extends StatelessWidget {
                     // temporarily returning to beginning 
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const FirstRoute()),
+                      MaterialPageRoute(builder: (context) => const EighthRoute()),
                     );
                   },
                 ),
@@ -430,4 +430,66 @@ class SeventhRoute extends StatelessWidget {
 }
 
 
+class EighthRoute extends StatelessWidget {
+  const EighthRoute({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              "assets/car-simulator.jpg", 
+              fit: BoxFit.cover,
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'The Civil Engineering Driving Simulator Laboratory allows students and faculty to research driving behaviors, environments, and traffic. Recent research projects include the outcomes of distracted driving, the effects of various weather conditions, and how drivers might interact with a semi-autonomous driving system.',
+                  style: TextStyle(
+                    fontSize: 24, 
+                    fontWeight: FontWeight.bold, 
+                    color: Color.fromARGB(255, 11, 10, 10),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
+                  ),
+                ),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  child: const Text('Return to main tour'),
+                  onPressed: () {
+                    // Go back to first floor
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const fifthRoute()),
+                    );
+                  },
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Back to Stairs'),
+                ),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  child: const Text('Exit PFT'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FirstRoute()),
+                    );
+                  }
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
