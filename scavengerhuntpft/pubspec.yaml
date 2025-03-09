@@ -58,6 +58,11 @@ flutter:
     - assets/greatroomlsu.jpg
     - assets/capstone-stairs.jpg
     - assets/car-simulator.jpg
+    - assets/upstairs-lab.jpeg
+    - assets/classroom.jpeg
+    - assets/entrance.jpeg
+    - assets/panera.jpeg
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
