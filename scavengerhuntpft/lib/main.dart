@@ -128,7 +128,7 @@ class ThirdRoute extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  'This is Where students do their work, study, and lounge between classes!',
+                  'This is where students do their work, study, and lounge between classes!',
                   style: TextStyle(
                     fontSize: 24, 
                     fontWeight: FontWeight.bold, 
@@ -328,12 +328,11 @@ class sixthRoute extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 ElevatedButton(
-                  child: const Text('insert here'),
+                  child: const Text("Let's checkout the second floor!"),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const fifthRoute()),
-                      // change to 4th route when ready to add more
+                      MaterialPageRoute(builder: (context) => const SeventhRoute()),
                     );
                   },
                 ),
@@ -362,5 +361,73 @@ class sixthRoute extends StatelessWidget {
     );
   }
 }
+
+
+
+
+class SeventhRoute extends StatelessWidget {
+  const SeventhRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              "assets/capstone-stairs.jpg", 
+              fit: BoxFit.cover,
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Let\'s head upstairs to check out some of the speciality labs on the second floor!',
+                  style: TextStyle(
+                    fontSize: 24, 
+                    fontWeight: FontWeight.bold, 
+                    color: Color.fromARGB(255, 11, 10, 10),
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255)
+                  ),
+                ),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  child: const Text('Go to Driving Simulator Lab'),
+                  onPressed: () {
+                    // temporarily returning to beginning 
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FirstRoute()),
+                    );
+                  },
+                ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Back'),
+                ),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  child: const Text('Exit PFT'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FirstRoute()),
+                    );
+                  }
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 
 

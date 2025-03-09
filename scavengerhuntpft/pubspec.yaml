@@ -52,10 +52,11 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets\pftfront.jpg
-    - assets\pftlounge.jpg
-    - assets\fillerimage.jpg
-    - assets\greatroomlsu.jpg
+    - assets/pftfront.jpg
+    - assets/pftlounge.jpg
+    - assets/fillerimage.jpg
+    - assets/greatroomlsu.jpg
+    - assets/capstone-stairs.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
