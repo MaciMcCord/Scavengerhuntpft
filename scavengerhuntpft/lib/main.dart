@@ -33,11 +33,7 @@ final ThemeData appTheme = ThemeData(
 );
 
 void main() {
-  runApp(MaterialApp(
-    theme: appTheme,
-    debugShowCheckedModeBanner: false, // Remove debug banner
-    home: const FirstRoute(),
-  ));
+  runApp(const MaterialApp(home: FirstRoute()));
 }
 
 class FirstRoute extends StatelessWidget {
@@ -85,10 +81,10 @@ class FirstRoute extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    'Hello! Welcome to PFT, Come take a tour!',
-                    style: TextStyle(
+                  'Hello! Welcome to PFT, Come take a tour!',
+                  style: TextStyle(
                       fontSize: 26, // Slightly larger
-                      fontWeight: FontWeight.bold, 
+                    fontWeight: FontWeight.bold, 
                       color: Color(0xFF5D4777), // Dark purple
                       height: 1.3, // Line height for better readability
                     ),
@@ -112,14 +108,14 @@ class FirstRoute extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                       textStyle: TextStyle(fontSize: 18),
                     ),
-                    child: const Text('Take a look inside!'),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const SecondRoute()),
-                      );
-                    },
-                  ),
+                  child: const Text('Take a look inside!'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SecondRoute()),
+                    );
+                  },
+                ),
                 ),
               ],
             ),
@@ -174,10 +170,10 @@ class SecondRoute extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    "This is the entrance showing rooms 1100 and 1200!",
-                    style: TextStyle(
-                      fontSize: 24, 
-                      fontWeight: FontWeight.bold, 
+                  "This is the entrance showing rooms 1100 and 1200!",
+                  style: TextStyle(
+                    fontSize: 24, 
+                    fontWeight: FontWeight.bold, 
                       color: Color(0xFF5D4777),
                       height: 1.3,
                     ),
@@ -202,14 +198,14 @@ class SecondRoute extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                       textStyle: TextStyle(fontSize: 18),
                     ),
-                    child: const Text('Study Area and research rooms'),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const ThirdRoute()),
-                      );
-                    },
-                  ),
+                  child: const Text('Study Area and research rooms'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ThirdRoute()),
+                    );
+                  },
+                ),
                 ),
                 // Back button moved to bottom for consistency
                 Container(
@@ -291,9 +287,9 @@ class ThirdRoute extends StatelessWidget {
                   ),
                   child: Text(
                     'This is where students do their work, study, and lounge between classes!',
-                    style: TextStyle(
-                      fontSize: 24, 
-                      fontWeight: FontWeight.bold, 
+                  style: TextStyle(
+                    fontSize: 24, 
+                    fontWeight: FontWeight.bold, 
                       color: Color(0xFF5D4777),
                       height: 1.3,
                     ),
@@ -318,13 +314,13 @@ class ThirdRoute extends StatelessWidget {
                       textStyle: TextStyle(fontSize: 18),
                     ),
                     child: const Text("Let's see the classroom!"),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const fourthroute()),
-                      );
-                    },
-                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const fourthroute()),
+                    );
+                  },
+                ),
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 40),
@@ -343,11 +339,11 @@ class ThirdRoute extends StatelessWidget {
                           ],
                         ),
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('Back'),
-                        ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Back'),
+                ),
                       ),
                       const SizedBox(width: 20),
                       Container(
@@ -362,14 +358,14 @@ class ThirdRoute extends StatelessWidget {
                           ],
                         ),
                         child: ElevatedButton(
-                          child: const Text('Exit PFT'),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const FirstRoute()),
-                            );
-                          }
-                        ),
+                  child: const Text('Exit PFT'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FirstRoute()),
+                    );
+                  }
+                ),
                       ),
                     ],
                   ),
@@ -562,10 +558,10 @@ class fifthRoute extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    'This is the largest lounge area we have. Here you can study and eat. There are also computer labs/ classrooms located in the halls leading here and a panera right by the exit!',
-                    style: TextStyle(
-                      fontSize: 24, 
-                      fontWeight: FontWeight.bold, 
+                  'This is the largest lounge area we have. Here you can study and eat. There are also computer labs/ classrooms located in the halls leading here and a panera right by the exit!',
+                  style: TextStyle(
+                    fontSize: 24, 
+                    fontWeight: FontWeight.bold, 
                       color: Color(0xFF5D4777),
                       height: 1.3,
                     ),
@@ -589,14 +585,14 @@ class fifthRoute extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                       textStyle: TextStyle(fontSize: 18),
                     ),
-                    child: const Text('Lets see Panera, Im hungry!'),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const sixthRoute()),
-                      );
-                    },
-                  ),
+                  child: const Text('Lets see Panera, Im hungry!'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const sixthRoute()),
+                    );
+                  },
+                ),
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 40),
@@ -615,11 +611,11 @@ class fifthRoute extends StatelessWidget {
                           ],
                         ),
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('Back'),
-                        ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Back'),
+                ),
                       ),
                       const SizedBox(width: 20),
                       Container(
@@ -634,14 +630,14 @@ class fifthRoute extends StatelessWidget {
                           ],
                         ),
                         child: ElevatedButton(
-                          child: const Text('Exit PFT'),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const FirstRoute()),
-                            );
-                          }
-                        ),
+                  child: const Text('Exit PFT'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FirstRoute()),
+                    );
+                  }
+                ),
                       ),
                     ],
                   ),
@@ -698,10 +694,10 @@ class sixthRoute extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    'This is the only campus panera bread, tucked right inside of our engineering building. After you fail a test, you can come get bread!',
-                    style: TextStyle(
-                      fontSize: 24, 
-                      fontWeight: FontWeight.bold, 
+                  'This is the only campus panera bread, tucked right inside of our engineering building. After you fail a test, you can come get bread!',
+                  style: TextStyle(
+                    fontSize: 24, 
+                    fontWeight: FontWeight.bold, 
                       color: Color(0xFF5D4777),
                       height: 1.3,
                     ),
@@ -726,13 +722,13 @@ class sixthRoute extends StatelessWidget {
                       textStyle: TextStyle(fontSize: 18),
                     ),
                     child: const Text("Let's checkout the second floor!"),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
                         MaterialPageRoute(builder: (context) => const SeventhRoute()),
-                      );
-                    },
-                  ),
+                    );
+                  },
+                ),
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 40),
@@ -751,11 +747,11 @@ class sixthRoute extends StatelessWidget {
                           ],
                         ),
                         child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('Back'),
-                        ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Back'),
+                ),
                       ),
                       const SizedBox(width: 20),
                       Container(
@@ -770,14 +766,14 @@ class sixthRoute extends StatelessWidget {
                           ],
                         ),
                         child: ElevatedButton(
-                          child: const Text('Exit PFT'),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const FirstRoute()),
-                            );
-                          }
-                        ),
+                  child: const Text('Exit PFT'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FirstRoute()),
+                    );
+                  }
+                ),
                       ),
                     ],
                   ),
