@@ -151,7 +151,13 @@ class BaseScaffold extends StatelessWidget {
               }
               break;
             case 1:
-              // need to implement the map screen here
+              if (currentIndex != 1) {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MapRoute()),
+                  (route) => false,
+                );
+              }
               break;
             case 2:
               // need to implement the progress screen here
@@ -1574,6 +1580,82 @@ class _EighthRouteState extends State<EighthRoute> {
                 ),
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// Map page
+class MapRoute extends StatelessWidget {
+  const MapRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BaseScaffold(
+      currentIndex: 1,
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: SingleChildScrollView(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width, // Make the map wider
+                height: MediaQuery.of(context).size.height, // Make the map taller
+                child: Image.asset(
+                  "assets/tour map.jpg",
+                  fit: BoxFit.cover,
+                  filterQuality: FilterQuality.high,
+                ),
+              ),
+            ),
+          ),
+          Positioned.fill(
+            child: Container(
+              color: Colors.black.withOpacity(0.1),
+            ),
+          ),
+          Center(
+            child: Container(
+              margin: const EdgeInsets.all(24),
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.9),
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 15,
+                    offset: const Offset(0, 5),
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    "PFT Tour Map",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: lsuPurple,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 16),
+                  const Text(
+                    "Use this map to navigate through the building and find all the locations!",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black87,
+                      height: 1.3,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
